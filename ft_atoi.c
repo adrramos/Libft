@@ -1,33 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 17:32:07 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/27 17:32:04 by adrramos         ###   ########.fr       */
+/*   Created: 2025/10/27 18:40:59 by adrramos          #+#    #+#             */
+/*   Updated: 2025/10/27 19:05:37 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-/* // For main without printf
-#include <unistd.h>*/
+/* Incompleto faltam as condicoes para */
 
-void	ft_bzero(void *s, size_t n)
+int atoi(const char *nptr)
 {
-	unsigned char	*str;
+	unsigned int	num;
+	unsigned int	sign;
 	unsigned int	i;
-
-	*str = s;
+	
+	num = 0;
+	sign = 1;
 	i = 0;
-	while (i < n)
+
+	while( (nptr[i] < '0' || nptr[i] > '9') &&  nptr[i] != '-' && nptr[i] != '+')
+	i++;
+	while (nptr[i] == '-' || nptr[i] == '+' )
 	{
-		str[i] = '0';
+		if (nptr[i] == '-')
+		sign *= (-1);
 		i++;
 	}
+	while (nptr[i])
+	{
+			num = num * 10 + num % 10;
+			i++;
+	}	
+	return (num * sign);
 }
-
-/*void main (void)
-{
-}*/

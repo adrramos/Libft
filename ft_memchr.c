@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 19:07:56 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/24 19:18:20 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/10/27 17:23:19 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,27 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			count;
 	unsigned char 	*str;
-
+	unsigned char	letter;
+	
+	letter =  (char) c;
 	count = 0;
 	*str = s;
-	while(str[count] && count < n)
+	if (str[0] == NULL)
+		return (NULL);
+	else
 	{
-		count++;	
+		while(str[count] && count < n)
+		{
+			if(str[count] == c)
+			count++;	
+		}
+		return (str[count]);
 	}
-	
-	return (*);
 }
 /*
 Incompleto!!!!
 
+? converter em 
 The  memchr()  function  scans  the initial n bytes of 
 the memory area pointed to by s for the
 first instance of c.  Both c and the bytes 

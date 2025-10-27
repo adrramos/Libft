@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 17:32:07 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/27 17:32:04 by adrramos         ###   ########.fr       */
+/*   Created: 2025/10/27 18:34:52 by adrramos          #+#    #+#             */
+/*   Updated: 2025/10/27 18:36:50 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-/* // For main without printf
-#include <unistd.h>*/
 
-void	ft_bzero(void *s, size_t n)
+
+/*usar compara string aqui???*/
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	unsigned char	*str;
-	unsigned int	i;
 
-	*str = s;
-	i = 0;
-	while (i < n)
-	{
-		str[i] = '0';
-		i++;
-	}
+	
 }
-
-/*void main (void)
-{
-}*/
