@@ -1,0 +1,46 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/10/16 16:46:34 by adrramos          #+#    #+#              #
+#    Updated: 2025/10/16 19:19:46 by adrramos         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#Variables
+NAME = libft.a
+DIR_SRC = srcs
+SRCS = $(DIR_SRC)/ft_putchar.c \
+	$(DIR_SRC)/ft_putstr.c \
+	$(DIR_SRC)/ft_strcmp.c \
+	$(DIR_SRC)/ft_strlen.c \
+	$(DIR_SRC)/ft_swap.c
+
+CC = cc
+CFLAGS = -Werror -Wall -Wextra
+OBJECTS = $(SRCS:.c=.o)
+INC_DIRS = includes
+RM = rm -f
+
+#Cria os ficheiros .o  com base no .c
+.c.o: 
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I$(INC_DIRS)
+
+$(NAME): $(OBJECTS)
+	ar rcs $(NAME) $(OBJECTS)
+
+all: $(NAME)
+
+## clean, fclean and re as well as all.
+clean:
+	$(RM) $(OBJECTS)
+
+fclean:
+	$(RM) $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re

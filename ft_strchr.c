@@ -6,15 +6,15 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:59:36 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/24 16:28:18 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:00:53 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned char 	*str;
+	unsigned char	*str;
 	unsigned int	i;
-	
+
 	*str = s;
 	i = 0;
 	while (str[i])

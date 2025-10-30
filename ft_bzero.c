@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:32:07 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/27 17:32:04 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/10/30 13:52:16 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,6 @@ void	ft_bzero(void *s, size_t n)
 
 /*void main (void)
 {
+
+
 }*/
