@@ -1,42 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 18:34:52 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/30 15:15:35 by adrramos         ###   ########.fr       */
+/*   Created: 2025/10/30 15:39:29 by adrramos          #+#    #+#             */
+/*   Updated: 2025/10/30 15:54:14 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+/*The  strdup() function returns a pointer to a new string which is a 
+duplicate of the string s.Memory for the new string is obtained with 
+malloc(3), and can be freed with free(3).*/
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char *ft_strdup(const char *s)
 {
-	size_t	i;
-	size_t	position;
-	size_t	j;
+	char	*dups;
 
-	i = 0;
-	position = 0;
-	j = 0;
-	if (little[0] == '\0')
-		return (*big);
-	while (big[i])
-	{
-		while (little[j] == big[i] && j < len)
-		{
-			j++;
-			i++;
-		}
-		return (big[i]);
-		i++;
-	}
-	return (0);
+	*dups = (char*) malloc (sizeof(char) * x);
+	return (*dups);
 }
 
 /*
-Duvida na posicao final   do array ou inicio
-Confirmar o return
-*/
+void main (void)
+{
+ 	
+}*/

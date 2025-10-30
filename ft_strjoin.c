@@ -1,42 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 18:34:52 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/30 15:15:35 by adrramos         ###   ########.fr       */
+/*   Created: 2025/10/30 16:10:53 by adrramos          #+#    #+#             */
+/*   Updated: 2025/10/30 16:12:17 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+/*Usar String lengh*/
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	position;
-	size_t	j;
 
-	i = 0;
-	position = 0;
-	j = 0;
-	if (little[0] == '\0')
-		return (*big);
-	while (big[i])
-	{
-		while (little[j] == big[i] && j < len)
-		{
-			j++;
-			i++;
-		}
-		return (big[i]);
-		i++;
-	}
-	return (0);
+	
+	
 }
-
-/*
-Duvida na posicao final   do array ou inicio
-Confirmar o return
-*/
