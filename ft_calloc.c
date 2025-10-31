@@ -6,35 +6,43 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:12:46 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/30 16:08:23 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/10/31 18:05:13 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char *straux;
 	size_t	i;
 
-	straux = malloc();
+	if (nmemb == 0 || size == 0)
+		return (malloc(0));
+	if (nmemb > (SIZE_MAX / size))
+		return (NULL);
+	straux = malloc(nmemb * size);
+	if(straux == NULL)
+		return (NULL);
 	i = 0;
-	while (straux[i])
+	while (i < nmemb * size)
 	{
 		straux[i] = 0;
 		i++;
 	}
-	straux[i] = '\0';
-	
-	return ();
-	
-/*	if (nmemb == 0 || size == 0)
-		return (0);
-	
-	nmemb = malloc(sizeof(int) * size);*/
+	return (straux);
 }
- /*
- Incompleto
- */
+
+/*
+int main (void)
+{
+	char	s[] = "Hello lad";
+	char	*s1;
+	int i = 0;
+	s1 = ft_calloc(10, 1);
+	//printf ( "%zu", strlen(s));
+	while(s1[i])
+		printf("%d", s1[i++]);
+	free(s1);
+	return (0);
+}*/

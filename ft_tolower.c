@@ -6,11 +6,12 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:53:13 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/30 13:59:45 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/10/31 18:16:41 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* convert lowercase */
+#include "libft.h"
+
 int ft_tolower(int c)
 {	
 	if (c <= 'A'  && c  <= 'Z')

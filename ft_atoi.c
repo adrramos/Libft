@@ -6,9 +6,11 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 18:40:59 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/30 14:51:10 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/10/31 18:05:29 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	atoi(const char *nptr)
 {

@@ -6,9 +6,11 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:35:40 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/30 14:01:03 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/10/31 18:17:00 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int ft_toupper(int c)
 {	

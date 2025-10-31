@@ -6,10 +6,11 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 16:10:53 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/30 16:12:17 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/10/31 18:13:37 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 /*Usar String lengh*/
 
 char	*ft_strjoin(char const *s1, char const *s2)

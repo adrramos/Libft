@@ -6,11 +6,11 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:29:48 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/30 15:09:04 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/10/31 19:41:10 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -18,16 +18,16 @@ int	ft_strlcat(char *dst, const char *src, size_t size)
 	unsigned char	*s;
 	size_t  i;
 
-	*d = dst;
-	*s = src;
-	i = 1;
+	d = (unsigned char*)dst;
+	s = (unsigned char*)src;
+	i = 0;
 	while (i < size)
 	{
                 d[i] = s[i];
 		if (d[i] == '\0')
 	        i++;
 	}
-	return (i); //Confirmar o retorno
+	return (i); 
 }
 
 /*Confirmar o tamaho com base nas condicoe, 

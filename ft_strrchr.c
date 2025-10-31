@@ -6,9 +6,11 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:27:43 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/30 14:12:36 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/10/31 18:15:46 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

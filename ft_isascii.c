@@ -6,11 +6,12 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:48:01 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/22 16:56:44 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/10/31 18:07:10 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*confirmar o tipo de argumento da funcao?*/
+#include "libft.h"
+
 int	ft_isascii(char c)
 {
 	if (c >= 0 && c <= 127)

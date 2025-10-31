@@ -6,20 +6,18 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:32:07 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/30 13:52:16 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/10/31 19:01:53 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-/* // For main without printf
-#include <unistd.h>*/
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*str;
 	unsigned int	i;
-
-	*str = s;
+	
+	str = (unsigned char*)s;
 	i = 0;
 	while (i < n)
 	{
@@ -27,9 +25,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
-/*void main (void)
-{
-
-
-}*/

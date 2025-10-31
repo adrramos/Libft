@@ -6,11 +6,11 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:10:05 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/30 15:00:05 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/10/31 18:14:50 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(char *s)
 {
