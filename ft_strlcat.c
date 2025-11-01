@@ -6,34 +6,41 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:29:48 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/31 19:41:10 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/01 16:27:52 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*INCOMPLETO!!!!!!*/
 #include "libft.h"
 
-int	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned char	*d;
-	unsigned char	*s;
-	size_t  i;
+	size_t			dstlen;
+	size_t			srclen;
 
-	d = (unsigned char*)dst;
-	s = (unsigned char*)src;
-	i = 0;
-	while (i < size)
+	dstlen = ft_strlen (dst);
+	srclen = ft_strlen (src);
+	size_t			i;
+	if (dstlen >= size)
+		return (dstlen + size); // Confirmar
+	if (dstlen + srclen >= size)
 	{
-                d[i] = s[i];
-		if (d[i] == '\0')
-	        i++;
+		while ((i < dstlen - size - 1) && src[i])
+		{
+			dst[dstlen + i] = src[i];
+			i++;
+		}
+		dst[dstlen + i] = '\0';
+		return (dstlen + srclen);
 	}
-	return (i); 
 }
 
-/*Confirmar o tamaho com base nas condicoe, 
-se os tamanhos forem diferentes
- - se tam > n 
- - Se tam < n
+/*
+int main (void)
+{
+
+}*/
+/*
 EXAMPLES
      The following code fragment illustrates the simple case:
            char *s, *p, buf[BUFSIZ];

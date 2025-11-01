@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 16:09:00 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/31 18:16:05 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/01 16:41:58 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	
 	
 }

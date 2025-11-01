@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:27:43 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/31 18:15:46 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/01 14:52:57 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strrchr(const char *s, int c)
 	unsigned int	i;
 	unsigned int	position;
 
-	*str = s;
+	str = (unsigned char*) s;
 	i = 0;
 	position = 0;
 	while (str[i])
@@ -31,7 +31,7 @@ char	*ft_strrchr(const char *s, int c)
 		else
 			i++;
 	}
-	return (s[position]);
+	return ((char*) &str[position]);
 }
 
 /*void main(void)

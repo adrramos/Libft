@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 18:31:49 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/31 19:20:36 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/01 15:21:11 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*source;
 	size_t			i;
 
-	d = (unsigned char*)dest;
-	source = (unsigned char*)src;
+	d = (unsigned char *)dest;
+	source = (unsigned char *)src;
 	i = 0;
 	while (source[i] && i < n)
 	{
