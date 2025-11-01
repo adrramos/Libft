@@ -6,13 +6,13 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:16:57 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/01 16:40:13 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/01 17:50:12 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t			dstlen;
 	size_t			srclen;

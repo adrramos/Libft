@@ -6,12 +6,13 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 17:57:32 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/01 15:01:39 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/01 17:56:22 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
@@ -34,9 +35,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 char	*ft_strchr(const char *s, int c);
 char 	*ft_strdup(const char *s);
-char	*ft_strjoin(char const *s1, char const *s2);
-int		ft_strlcat(char *dst, const char *src, size_t size);
-int		ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);

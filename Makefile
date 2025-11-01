@@ -5,25 +5,42 @@
 #                                                     +:+ +:+         +:+      #
 #    By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/16 16:46:34 by adrramos          #+#    #+#              #
-#    Updated: 2025/11/01 14:54:47 by adrramos         ###   ########.fr        #
+#    Created: 2025/11/01 17:33:31 by adrramos          #+#    #+#              #
+#    Updated: 2025/11/01 17:56:12 by adrramos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Variables
 NAME = libft.a
 
-SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
-	ft_isdigit.c ft_isprint.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c \
-	ft_memset.c ft_strchr.c ft_strdup.c ft_toupper.c ft_strlcat.c ft_strlcpy.c \
-	ft_strlen.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_tolower.c \
-	#ft_strjoin.c ft_substr.c
+SRCS = 	./ft_atoi.c \
+		./ft_bzero.c \
+		./ft_calloc.c \
+		./ft_isalnum.c \
+		./ft_isalpha.c \
+		./ft_isascii.c \
+		./ft_isdigit.c \
+		./ft_isprint.c \
+		./ft_memchr.c \
+		./ft_memcmp.c \
+		./ft_memcpy.c \
+		./ft_memmove.c \
+		./ft_memset.c \
+		./ft_strchr.c \
+		./ft_strdup.c \
+		./ft_toupper.c \
+		./ft_strlen.c \
+		./ft_strncmp.c \
+		./ft_strnstr.c \
+		./ft_strrchr.c \
+		./ft_tolower.c 
+#ft_strjoin.c ft_substr.c ./ft_strlcat.c ./ft_strlcpy.c \
+#SRCS = $(wildcard *.c)
+OBJECTS = $(SRCS:.c=.o)
 
 CC = cc
 
 CFLAGS = -Werror -Wall -Wextra
-
-OBJECTS = $(SRCS:.c=.o)
 
 RM = rm -f
 
@@ -43,6 +60,6 @@ clean:
 fclean:
 	$(RM) $(NAME)
 
-re: fclean all
+re: fclean all 
 
 .PHONY: all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:12:46 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/31 18:05:13 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/01 18:04:12 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char *straux;
+	char	*straux;
 	size_t	i;
 
 	if (nmemb == 0 || size == 0)
@@ -22,7 +22,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (nmemb > (SIZE_MAX / size))
 		return (NULL);
 	straux = malloc(nmemb * size);
-	if(straux == NULL)
+	if (straux == NULL)
 		return (NULL);
 	i = 0;
 	while (i < nmemb * size)
