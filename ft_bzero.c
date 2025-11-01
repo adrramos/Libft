@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:32:07 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/01 15:18:48 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/01 18:19:33 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		str[i] = '0';
+		str[i] = 0;
 		i++;
 	}
 }

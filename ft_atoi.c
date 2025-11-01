@@ -6,43 +6,45 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 18:40:59 by adrramos          #+#    #+#             */
-/*   Updated: 2025/10/31 18:05:29 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/01 19:34:23 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	atoi(const char *nptr)
+int	ft_isdigit(char c)
 {
-	unsigned int	num;
-	unsigned int	sign;
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
+}
+
+int	ft_atoi(const char *nptr)
+{
+	int				num;
+	int				sign;
 	unsigned int	i;
 
 	num = 0;
 	sign = 1;
 	i = 0;
-	while ((nptr[i] < '0' || nptr[i] > '9')
-		&& (nptr[i] != '-') && (nptr[i] != '+'))
-		i++;
-	while (nptr[i] == '-' || nptr[i] == '+' )
+	if (nptr[i] == '-' || nptr[i] == '+' )
 	{
 		if (nptr[i] == '-')
 			sign *= (-1);
 		i++;
 	}
-	while (nptr[i])
+	while (nptr[i] && ft_isdigit(nptr[i]) == 1)
 	{
-		num = num * 10 + num % 10;
+		num =  num * 10 + ((nptr[i] - '0') % 10);
 		i++;
 	}
 	return (num * sign);
 }
 
-/*Testar!!!
-#include <stdio.h>
-
-void main(void)
+/*int main(void)
 {
-chat *num = "-115545";
-}
-*/
+	char *num = "12456";
+	printf("Original: %i\n",atoi(num));
+	printf("Meu: %i\n",ft_atoi(num));
+}*/
