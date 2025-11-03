@@ -6,7 +6,7 @@
 #    By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 17:33:31 by adrramos          #+#    #+#              #
-#    Updated: 2025/11/01 17:56:12 by adrramos         ###   ########.fr        #
+#    Updated: 2025/11/03 19:06:06 by adrramos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,9 +33,10 @@ SRCS = 	./ft_atoi.c \
 		./ft_strncmp.c \
 		./ft_strnstr.c \
 		./ft_strrchr.c \
-		./ft_tolower.c 
-#ft_strjoin.c ft_substr.c ./ft_strlcat.c ./ft_strlcpy.c \
-#SRCS = $(wildcard *.c)
+		./ft_tolower.c \
+		./ft_strlcat.c \
+		./ft_strlcpy.c
+
 OBJECTS = $(SRCS:.c=.o)
 
 CC = cc

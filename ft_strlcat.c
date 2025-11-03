@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:29:48 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/01 16:27:52 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/03 19:08:35 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,57 +15,35 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t			dstlen;
-	size_t			srclen;
+	size_t  dstlen;
+	size_t  srclen;
+    size_t	i;
 
 	dstlen = ft_strlen (dst);
-	srclen = ft_strlen (src);
-	size_t			i;
+	srclen = ft_strlen ((char*) src);
+    i = 0;	
 	if (dstlen >= size)
-		return (dstlen + size); // Confirmar
-	if (dstlen + srclen >= size)
+	    return (dstlen + size);
+	while (src[i] && (dstlen + i < size - 1))
 	{
-		while ((i < dstlen - size - 1) && src[i])
-		{
-			dst[dstlen + i] = src[i];
-			i++;
-		}
-		dst[dstlen + i] = '\0';
-		return (dstlen + srclen);
+		dst[dstlen + i] = src[i];
+		i++;
 	}
+	dst[dstlen + i] = '\0';
+	return (dstlen + srclen);
 }
 
-/*
-int main (void)
+/*int main(void)
 {
+    char destination[20] = "Hello, ";
+    const char *source = "World!";
+    size_t total_length;
+    size_t total_lengthft;
 
+    total_length = strlcat(destination, source, sizeof(destination));
+    total_lengthft = ft_strlcat(destination, source, sizeof(destination));
+    printf("Concatenated string: %s\n", destination);
+    printf("Total length: %zu\n", total_length);
+    printf("Total length meu: %zu\n", total_lengthft);
+    return (0);
 }*/
-/*
-EXAMPLES
-     The following code fragment illustrates the simple case:
-           char *s, *p, buf[BUFSIZ];
-           ...
-           (void)strlcpy(buf, s, sizeof(buf));
-           (void)strlcat(buf, p, sizeof(buf));
-     To detect truncation, perhaps while building a pathname, 
-     something like the following might be
-     used:
-           char *dir, *file, pname[MAXPATHLEN];
-           ...
-           if (strlcpy(pname, dir, sizeof(pname)) >= sizeof(pname))
-                   goto toolong;
-           if (strlcat(pname, file, sizeof(pname)) >= sizeof(pname))
-                   goto toolong;
-     Since it is known how many characters were copied the first 
-     time, things can be sped up a bit by
-     using a copy instead of an append:
-           char *dir, *file, pname[MAXPATHLEN];
-           size_t n;
-           ...
-           n = strlcpy(pname, dir, sizeof(pname));
-           if (n >= sizeof(pname))
-                   goto toolong;
-           if (strlcpy(pname + n, file, sizeof(pname) - n) >= 
-           sizeof(pname) - n)
-                   goto toolong;
-*/
