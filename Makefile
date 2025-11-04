@@ -6,7 +6,7 @@
 #    By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 17:33:31 by adrramos          #+#    #+#              #
-#    Updated: 2025/11/03 19:06:06 by adrramos         ###   ########.fr        #
+#    Updated: 2025/11/04 19:34:20 by adrramos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,8 @@ SRCS = 	./ft_atoi.c \
 		./ft_strrchr.c \
 		./ft_tolower.c \
 		./ft_strlcat.c \
-		./ft_strlcpy.c
+		./ft_strlcpy.c \
+		./ft_strjoin.c
 
 OBJECTS = $(SRCS:.c=.o)
 
@@ -58,7 +59,7 @@ all: $(NAME)
 clean:
 	$(RM) $(OBJECTS)
 
-fclean:
+fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all 

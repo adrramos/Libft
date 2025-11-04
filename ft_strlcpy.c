@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:16:57 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/03 19:09:39 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:18:23 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dstlen = ft_strlen (dst);
 	srclen = ft_strlen ((char*) src);
 	i = 0;
+	if( !src)
+		return (0);
 	if (size > 0)
 	{
 		if (dstlen >= size - 1)
 			return (dstlen + size);
-		while (src[i] && i < size)
+		while (i < size)
 		{
 			dst[i] = src[i];
 			i++;

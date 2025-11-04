@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/30 15:39:29 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/04 19:19:06 by adrramos         ###   ########.fr       */
+/*   Created: 2025/11/03 19:55:05 by adrramos          #+#    #+#             */
+/*   Updated: 2025/11/04 19:23:46 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,32 +22,43 @@ size_t	ft_strlen(char *s)
 	return (i);
 }
 
-char	*ft_strdup(const char *s)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*dups;
-	int		count;
+	char	*str;
+	size_t	i;
+	size_t	j;
 
-	dups = malloc (sizeof(char) * (ft_strlen((char *)s) + 1));
-	if (!dups)
+	i = 0;
+	if (!s1 || !s2)
 		return (NULL);
-	count = 0;
-	while (s[count])
+	str = (char *) malloc((ft_strlen((char *)s1) + 
+			ft_strlen((char *)s2) + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	while(s1[i] != '\0' )
 	{
-		dups[count] = s[count];
-		count++;
+		str[i] = s1[i];
+		i++;
 	}
-	dups[count] = '\0';
-	return (dups);
+	j = 0;
+	while(str[j] != '\0')
+	{
+		str[i + j] = s2[j];
+		j++;
+		i++;
+	}
+	str[i + j] = '\0';
+	return(str);
 }
 
 /*int main (void)
 {
- 	char aux[] = "Hellohelohenjjnknjoijoijoijoijj";
-	char *copy;
+	char *text1 = "Hello";
+	char *text2 = "Bye";
 	
-	copy = ft_strdup (aux);
-	printf ("%s \n", copy);
-	printf ("%s \n", strdup(aux));
-	printf ("%zu \n", sizeof(copy));
-	return (0);
-}*/
+	printf  ("%s",ft_strjoin(text1,text2));
+}
+*/
+/*
+confirmar se o poiters estao correctos...
+*/
