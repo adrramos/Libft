@@ -50,4 +50,5 @@ int	ft_atoi(const char *nptr)
 	char *num = "-123";
 	printf("Original: %i\n",atoi(num));
 	printf("Meu: %i\n",ft_atoi(num));
+	
 }*/
