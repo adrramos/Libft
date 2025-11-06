@@ -6,7 +6,7 @@
 #    By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 17:33:31 by adrramos          #+#    #+#              #
-#    Updated: 2025/11/05 16:32:28 by adrramos         ###   ########.fr        #
+#    Updated: 2025/11/06 20:23:32 by adrramos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,8 @@ SRCS = 	./ft_atoi.c \
 		./ft_strlcat.c \
 		./ft_strlcpy.c \
 		./ft_strjoin.c \
-		./ft_strtrim
-
+		./ft_itoa.c
+#./ft_strtrim.c \ 
 OBJECTS = $(SRCS:.c=.o)
 
 CC = cc

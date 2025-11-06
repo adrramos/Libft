@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:16:57 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/04 19:18:23 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/06 20:41:50 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t			dstlen;
-	size_t			srclen;
-	size_t			i;
+	size_t	dstlen;
+	size_t	srclen;
+	size_t	i;
 
-	dstlen = ft_strlen (dst);
-	srclen = ft_strlen ((char*) src);
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen((char *)src);
 	i = 0;
-	if( !src)
+	if (!src)
 		return (0);
 	if (size > 0)
 	{
@@ -35,11 +35,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[i] = '\0';
 		return (dstlen);
 	}
-	return(srclen);
+	return (srclen);
 }
 
-/*Confirmar o tamaho com base nas condicoe, 
+/*Confirmar o tamaho com base nas condicoe,
 se os tamanhos forem diferentes
- - se tam > n 
+ - se tam > n
  - Se tam < n
 */

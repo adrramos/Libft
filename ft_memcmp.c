@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:35:01 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/01 15:20:55 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/06 20:40:11 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*string2;
 	size_t			i;
 
-	string1 = (unsigned char *) s1;
-	string2 = (unsigned char *) s2;
+	string1 = (unsigned char *)s1;
+	string2 = (unsigned char *)s2;
 	i = 0;
 	if (n == 0)
 		return (0);
@@ -34,11 +34,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 /*
  Compare memory areas
  Testar!!!
- Confirmar se funciona quando e null 
+ Confirmar se funciona quando e null
  -  Quando compara com um a
- --- Esta com erros 
+ --- Esta com erros
  */
-/*void main (void) 
+/*void main (void)
 {
 	unsigned char	*test1;
 	unsigned char	*test2;

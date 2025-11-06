@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:39:29 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/04 19:19:06 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/06 20:41:14 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strdup(const char *s)
 	char	*dups;
 	int		count;
 
-	dups = malloc (sizeof(char) * (ft_strlen((char *)s) + 1));
+	dups = malloc(sizeof(char) * (ft_strlen((char *)s) + 1));
 	if (!dups)
 		return (NULL);
 	count = 0;
@@ -42,9 +42,9 @@ char	*ft_strdup(const char *s)
 
 /*int main (void)
 {
- 	char aux[] = "Hellohelohenjjnknjoijoijoijoijj";
+	char aux[] = "Hellohelohenjjnknjoijoijoijoijj";
 	char *copy;
-	
+
 	copy = ft_strdup (aux);
 	printf ("%s \n", copy);
 	printf ("%s \n", strdup(aux));

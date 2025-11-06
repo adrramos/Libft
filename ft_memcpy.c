@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 18:31:49 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/04 18:12:56 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/06 20:40:21 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/*confirmar retorno da funcao e se as 
+/*confirmar retorno da funcao e se as
 vari'aveis sao as mais adequada*/

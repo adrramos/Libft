@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:29:48 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/05 16:49:48 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/06 20:41:34 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	if (!dst && !src)
 		return (0);
-	dstlen = ft_strlen (dst);
-	srclen = ft_strlen ((char *) src);
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen((char *)src);
 	i = 0;
 	if (dstlen >= size)
 		return (dstlen + size);
@@ -36,15 +36,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 /*int main(void)
 {
-    char destination[20] = "Hello, ";
-    const char *source = "World!";
-    size_t total_length;
-    size_t total_lengthft;
+	char destination[20] = "Hello, ";
+	const char *source = "World!";
+	size_t total_length;
+	size_t total_lengthft;
 
-    total_length = strlcat(destination, source, sizeof(destination));
-    total_lengthft = ft_strlcat(destination, source, sizeof(destination));
-    printf("Concatenated string: %s\n", destination);
-    printf("Total length: %zu\n", total_length);
-    printf("Total length meu: %zu\n", total_lengthft);
-    return (0);
+	total_length = strlcat(destination, source, sizeof(destination));
+	total_lengthft = ft_strlcat(destination, source, sizeof(destination));
+	printf("Concatenated string: %s\n", destination);
+	printf("Total length: %zu\n", total_length);
+	printf("Total length meu: %zu\n", total_lengthft);
+	return (0);
 }*/

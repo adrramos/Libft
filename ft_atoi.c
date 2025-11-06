@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 18:40:59 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/03 17:40:15 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/06 20:37:51 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_atoi(const char *nptr)
 	while (nptr[i] == '\t' || nptr[i] == '\n' || nptr[i] == '\r'
 		|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == ' ')
 		i++;
-	if (nptr[i] == '-' || nptr[i] == '+' )
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
 		if (nptr[i] == '-')
 			sign *= (-1);
@@ -42,7 +42,7 @@ int	ft_atoi(const char *nptr)
 		num = num * 10 + (nptr[i] - '0');
 		i++;
 	}
-	return ((int) num * sign);
+	return ((int)num * sign);
 }
 
 /*int main(void)
@@ -50,5 +50,4 @@ int	ft_atoi(const char *nptr)
 	char *num = "-123";
 	printf("Original: %i\n",atoi(num));
 	printf("Meu: %i\n",ft_atoi(num));
-	
 }*/
