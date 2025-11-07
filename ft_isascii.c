@@ -6,13 +6,13 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:48:01 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/06 20:38:44 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/07 18:13:59 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

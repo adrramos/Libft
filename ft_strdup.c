@@ -6,21 +6,12 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:39:29 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/06 20:41:14 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/07 18:21:49 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
 
 char	*ft_strdup(const char *s)
 {

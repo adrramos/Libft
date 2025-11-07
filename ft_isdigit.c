@@ -6,13 +6,13 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:26:55 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/06 20:38:55 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/07 18:21:08 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);

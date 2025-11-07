@@ -6,18 +6,11 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 18:40:59 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/06 20:37:51 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/07 18:20:32 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_isdigit(char c)
-{
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
 
 int	ft_atoi(const char *nptr)
 {

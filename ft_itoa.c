@@ -6,60 +6,71 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 19:16:21 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/06 20:27:09 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/07 19:34:05 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	countnum(int n)
-{
-	int	count;
+static int	countnum(int n) 
+{	
+	int		count;
+	long	nbr;
 
 	count = 0;
-	if (n <= 0)
+	nbr =  n;
+	if (n < 0)
 	{
 		count++;
-		n = -n;
+		nbr = -nbr;
 	}
-	while (n != 0)
+	if (n == 0)
+		count++;
+		
+	while (nbr != 0)
 	{
-		n /= 10;
+		nbr /= 10;
 		count++;
 	}
 	return (count);
 }
+
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		nlen;
-	int		i;
+	char		*str;
+	int			nlen;
+	long int	nbr;
 
 	nlen = countnum(n);
-	str = (char *)malloc((nlen + 1) * sizeof(char));
+	nbr = n;
+	str = (char *) malloc((nlen + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
-	i = 0;
-	if (n < 0)
+	str[nlen] = '\0';
+	 
+	if (nbr < 0)
 	{
-		str[i] = '-';
-		i++;
-		n = -n;
+		str[0] = '-';
+		nbr = -nbr;
 	}
-	while (i <= nlen)
-	{
-		str[i] = (n % 10) + '0';
-		n = n / 10;
-		i++;
+	if (nbr == 0)
+		str[0] = '0';
+	while (nbr > 0)
+	{	nlen--;
+		str[nlen] = ((nbr % 10) + '0');
+		nbr = nbr / 10;
 	}
-	str[i] = '\0';
 	return (str);
 }
 
 /*int main (void)
 {
-	int numTest = -90;
+	int numTest = -5555;
 	char *result = ft_itoa(numTest);
-	printf("%s", result);
+	int contagem;
+	contagem = countnum(numTest);
+	printf("Teste %s \n", result);
+	printf("Teste funcao auxcontagem %i \n", contagem);
+	free(result);
 	return (0);
 }*/

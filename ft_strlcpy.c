@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:16:57 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/06 20:41:50 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/07 20:34:56 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,29 +17,33 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	dstlen;
 	size_t	srclen;
 	size_t	i;
+	size_t	cpylen;
 
 	dstlen = ft_strlen(dst);
-	srclen = ft_strlen((char *)src);
+	srclen = ft_strlen(src);
 	i = 0;
+	cpylen = 0;
 	if (!src)
 		return (0);
 	if (size > 0)
 	{
-		if (dstlen >= size - 1)
-			return (dstlen + size);
-		while (i < size)
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
-		return (dstlen);
+		if (srclen >= size)
+			cpylen = size - 1;
+		else 
+			cpylen = dstlen;
+		ft_memcpy(dst, src,cpylen);
+		dst[cpylen] = '\0';
+		return (srclen);
 	}
 	return (srclen);
 }
 
-/*Confirmar o tamaho com base nas condicoe,
-se os tamanhos forem diferentes
- - se tam > n
- - Se tam < n
-*/
+/*int main (void)
+{
+	char destino[50];
+	char *origem = "asddfgh";
+	
+	printf("Meu %zu \n", ft_strlcpy(destino, origem, 60) );
+	printf("Copied: %s\n", destino);
+	return (0);
+}*/

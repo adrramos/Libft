@@ -6,13 +6,13 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:57:18 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/06 20:39:54 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/07 18:15:22 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 & c <= 126)
 		return (1);
