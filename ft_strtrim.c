@@ -6,21 +6,11 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:28:23 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/06 20:42:20 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/10 20:40:33 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
 
 size_t	ft_countset(char const *s1, char const *set)
 {
@@ -56,8 +46,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = -1;
 	position = -1;
-	countset = ft_countset((char *)s1, (char *)set);
-	str = malloc((ft_strlen((char *)s1) - countset + 1) * sizeof(char));
+	countset = ft_countset(s1, set);
+	str = malloc((ft_strlen(s1) - countset + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
 	while (s1[++i])
@@ -74,5 +64,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 /*
 int main (void)
 {
-
+	
 }*/

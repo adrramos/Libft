@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/30 16:09:00 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/10 20:09:16 by adrramos         ###   ########.fr       */
+/*   Created: 2025/11/10 16:58:10 by adrramos          #+#    #+#             */
+/*   Updated: 2025/11/10 19:03:10 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+/*INCOMPLETO*/
+void ft_striteri(char *s, void (*f)(unsigned int,char*))
 {
-	char	*strcopy;
-	size_t	i;
+	char 			*str;
+	unsigned int	i;
 
-	if (start > ft_strlen(s) || (start + len > ft_strlen(s)))
-		return (NULL);
-	strcopy =  malloc(sizeof(char) * (len + 1));
-	if (!strcopy)
+	if (!s || !f)
 		return (NULL);
 	i = 0;
-	while (i < len && s[i])
+	str = ft_strdup(s);
+	while (str[i])
 	{
-		strcopy[i] = s[start + i];
+		(f)(i, str[i]);
 		i++;
 	}
-	strcopy[i] = '\0';
-	return (strcopy);
 }
-
-/*int main (void)
-{
-confimar ' ' - caso start > ft_strlen(s)
- }*/

@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 17:57:32 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/07 18:17:53 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/10 18:30:13 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_itoa(int n);
-
 //char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //char	*ft_strtrim(char const *s1, char const *set);
 

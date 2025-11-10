@@ -6,114 +6,96 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 16:51:01 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/06 20:40:54 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/10 21:20:10 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*INCOMPLETO ver*/
+/*INCOMPLETO*/
 static int	countwords(char const *str, char sep)
 {
 	int	i;
 	int	count;
+	int	is_word;
 
 	if (!str)
-		return (NULL);
-	i = 0;
+		return (0);
+	i = -1;
 	count = 0;
-	while (str)
+	is_word = 0;
+	while (str[++i])
 	{
-		if (str[i] == sep & str[i - 1] != sep)
+		while (str[i] == sep)
 		{
-			count++;
 			i++;
+			is_word = 0;
+			if (str[i + 1] == '\0')
+				return (count);
 		}
-		else
-			i++;
+		if (str[i] != sep && is_word == 0)
+		{
+			is_word = 1;
+			count++;
+		}
 	}
 	return (count);
+}
+
+static char *countletters(char const *str, char sep)
+{
+	int		i;
+	int		countletter;
+
+	if (!str)
+		return (0);
+	i = 0;
+	while (str[i] == sep)
+		i++;
+	while (str[i] && str[i] != sep)
+	{
+		countletter++;
+		i++;
+	}
+	return (countletter);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
 	char	*word;
-	int		countw;
-
-	countw = 0;
-	if (!s)
-		return (NULL);
-	countw = countwords(s, c);
-	str = malloc(sizeof(char) * (countw + 1));
-	if (!str)
-		return (NULL);
-	while (s)
-	{
-	}
-}
-
-/*
-static int	countwords(char const *str, char stop)
-{
-	int	count;
-	int	move;
-
-	if (!str)
-		return (0);
-	count = 0;
-	move = 0;
-	while (str)
-	{
-		if (str[move] == stop && str[move - 1] != stop)
-			;
-		count++;
-		move++;
-	}
-	return (count);
-}
-static int	countetters(char const *s, char c)
-{
-	char *subword st_strlen(s)
-}
-
-char	**ft_split(char const *s, char c)
-{
-	char **str;
-	int i; // para percorrer atring inicial
-	int row;
-	int col;
+	int		i;
+	int		j;
 
 	if (!s)
 		return (NULL);
-	str = malloc(sizeof(char) * (R * C + 1));
+	str = calloc( (countwords(s, c) + 1) , sizeof(char *));
 	if (!str)
 		return (NULL);
-	while (s)
-	{
-		if (s[i] == c)
-			str[row][col] = s[i];
-	}
+	i = 0;
 
-	while (s[i] != '\0')
+	while (i <= countwords(s, c) && *s)
 	{
-		// alocar memoria...
-		str = malloc(sizeof(char) * (st_strlen(s[]) + 1)) if (s[i] != c)
+		word = calloc(sizeof(char), (countletters(&s, c) + 1));
+		j = 0;
+		word = ft_strdup(&s);
+		while(j <= countletters(*s + j, c))
 		{
-			else
-			{
-				str[row][col] == '\0';
-				free(str[row][col]);
-				col = 0;
-				row++;
-			}
-			else {
-
-				col++;
-			}
+			str[i][j] = s[i];
 			i++;
+			j++;
 		}
-
-		return (**str); // Confirmar
+		str[i][j] = '\0';
+		free(word);
 	}
-*/
+	*str[i] = '\0';
+}
+
+/*int	main(void)
+{
+	int	counter;
+
+	counter = countwords("                     hello           this is the word                              ",
+			' ');
+	printf("%d\n", counter);
+}*/
