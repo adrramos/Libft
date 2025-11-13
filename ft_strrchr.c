@@ -15,27 +15,25 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	unsigned char	*str;
-	unsigned int	i;
-	unsigned int	position;
+	size_t			i;
 
-	str = (unsigned char *)s;
+	str = s;
 	i = 0;
-	position = 0;
-	while (str[i])
+	while ((unsigned char *)s[i])
 	{
-		if (str[i] == c)
-		{
-			position = i;
-			i++;
-		}
-		else
-			i++;
+		if ((unsigned char *)s[i] == (unsigned char)c)
+			return ((char *)&s[i]);
+		i++;
 	}
-	return ((char *)&str[position]);
+	if (str[i] == (unsigned char)c)
+		return ((char *) &s[i]);
+	return (NULL);
 }
 
-/*void main(void)
+/*int main(void)
 {
-	char	*aux;
-
+	const char *str = "tarte";
+	int c = 'a';
+	printf("%s   %s", ft_strchr(str, c), strchr(str, c));
+	return (0);
 }*/

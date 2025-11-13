@@ -14,29 +14,31 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t	dstlen;
 	size_t	srclen;
 	size_t	i;
-	size_t	cpylen;
 
-	dstlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
 	i = 0;
-	cpylen = 0;
-	if (!src)
-		return (0);
 	if (size > 0)
 	{
-		if (srclen > size)
-			cpylen = size - 1;
-		else 
-			cpylen = dstlen;
-		ft_memcpy(dst, src,cpylen);
-		dst[cpylen] = '\0';
-		return (srclen);
+		while (i < (size - 1) && src[i]) 
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] =  '\0';
 	}
 	return (srclen);
 }
+
+/* Main meg
+int main(void)
+{ // ft_strlcpy and ft_strlcat
+	const char *src = "Hello world!";
+	char dst[4] = "amor";
+	printf("len copied: %zu | dst: %s", ft_strlcopy(dst, src, 4), dst);
+	return 0;
+}*/
 
 /*int main (void)
 {

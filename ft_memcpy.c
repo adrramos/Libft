@@ -18,11 +18,11 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*source;
 	size_t			i;
 
+	if (!dest && !src)
+		return (NULL);	
 	d = (unsigned char *)dest;
 	source = (unsigned char *)src;
 	i = 0;
-	if (!dest && !src)
-		return (NULL);
 	while (i < n)
 	{
 		d[i] = source[i];
@@ -31,5 +31,38 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/*confirmar retorno da funcao e se as
-vari'aveis sao as mais adequada*/
+/*Main Meg*/
+/*int main(void)
+{
+	printf("========Testing memcpy========\n\n");
+	char src[10] = "abcdefghi";
+    char buffer1[10];
+    int i;
+	if (ft_memcpy(buffer1, src, 10) == ft_memcpy(buffer1, src, 10))
+	{
+		 printf("SUCCESS    Testing: dest, 'abcdefghi', 10\n");
+        while (i < 10)
+		{
+			printf("%c ", buffer1[i]);
+			i++;
+		}
+        printf("\n");
+    }
+    else
+	{
+        printf("Oh no :(    Testing: 10 bytes\n");
+	}
+	
+	printf("\n");
+	
+	// Test 2: Copy 0 bytes
+	i = 0;
+	if (ft_memcpy(buffer1, src, 0) == ft_memcpy(buffer1, src, 0))
+	{
+		 printf("SUCCESS    Testing: dest, 'abcdefghi', 0\n");
+    }
+    else
+	{
+        printf("Oh no :(    Testing: 10 bytes\n");
+	}
+}*/
