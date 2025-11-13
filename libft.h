@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 17:57:32 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/10 18:30:13 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/13 19:09:52 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <unistd.h>
 # include <limits.h>
 
-int		ft_atoi(const char *nptr);
+int	ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_isalnum(int c);
@@ -45,6 +45,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_itoa(int n);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putnbr_fd(int n, int fd);
 //char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //char	*ft_strtrim(char const *s1, char const *set);
 

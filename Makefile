@@ -6,7 +6,7 @@
 #    By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 17:33:31 by adrramos          #+#    #+#              #
-#    Updated: 2025/11/10 18:30:05 by adrramos         ###   ########.fr        #
+#    Updated: 2025/11/13 19:09:27 by adrramos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,8 +38,10 @@ SRCS = 	./ft_atoi.c \
 		./ft_strlcpy.c \
 		./ft_strjoin.c \
 		./ft_itoa.c \
+		./ft_striteri.c \
+		./ft_putchar_fd.c \
+		./ft_putnbr_fd.c
 
-		
 #./ft_strmapi
 #./ft_strtrim.c 
 

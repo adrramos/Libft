@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:27:43 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/06 20:42:14 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/13 16:55:22 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char	*str;
-	size_t			i;
+	size_t	i;
+	char	*result;
 
-	str = s;
 	i = 0;
-	while ((unsigned char *)s[i])
+	result = NULL;
+	while ((unsigned char)s[i])
 	{
-		if ((unsigned char *)s[i] == (unsigned char)c)
-			return ((char *)&s[i]);
+		if ((unsigned char)s[i] == (unsigned char)c)
+			result = (char *)&s[i];
 		i++;
 	}
-	if (str[i] == (unsigned char)c)
-		return ((char *) &s[i]);
-	return (NULL);
+	if ((unsigned char)s[i] == (unsigned char)c)
+		result = (char *)&s[i];
+	return (result);
 }
-
-/*int main(void)
+/*
+int main(void)
 {
 	const char *str = "tarte";
 	int c = 'a';
