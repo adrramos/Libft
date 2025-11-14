@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 18:07:34 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/13 18:56:58 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/14 17:59:51 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	ft_putendl_fd(char *s, int fd)
 		write (fd, &s[i], 1);
 		i++;
 	}
-	write (fd, '\n', 1);
+	write (fd, "\n", 1);
 }
