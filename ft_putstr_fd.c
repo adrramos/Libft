@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 17:47:22 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/13 18:06:36 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/17 18:46:15 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ void	ft_putstr_fd(char *s, int fd)
 	ssize_t	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
-		write(fd, &s[i],1);
+		write(fd, &s[i], 1);
 		i++;
 	}
 }
-

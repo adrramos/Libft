@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 18:13:49 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/13 18:57:08 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/17 18:44:55 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,17 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		ft_putchar_fd('-', fd);
 		n = -n;
-		ft_putnbr_fd(n,fd);
-	}	
+		ft_putnbr_fd(n, fd);
+	}
 	else if (n > 9)
 	{
 		ft_putnbr_fd(n / 10, fd);
 		ft_putnbr_fd(n % 10, fd);
 	}
 	else if (n >= 0 && n <= 9)
-		ft_putchar_fd(n + '0' , fd);
+		ft_putchar_fd(n + '0', fd);
 }
-	
+
 /*int	main(void)
 {
 	ft_putnbr_fd(-124344, 1);

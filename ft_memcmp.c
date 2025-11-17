@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:35:01 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/06 20:40:11 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/17 18:44:44 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char	*string1;
 	const unsigned char	*string2;
-	size_t			i;
-	int				calc;
+	size_t				i;
+	int					calc;
 
 	string1 = (const unsigned char *)s1;
 	string2 = (const unsigned char *)s2;

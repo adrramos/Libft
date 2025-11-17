@@ -6,7 +6,7 @@
 #    By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 17:33:31 by adrramos          #+#    #+#              #
-#    Updated: 2025/11/17 12:23:11 by adrramos         ###   ########.fr        #
+#    Updated: 2025/11/17 18:40:47 by adrramos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ SRCS = 	./ft_atoi.c \
 		./ft_putendl_fd.c \
 		./ft_putnbr_fd.c \
 		./ft_putstr_fd.c \
+		./ft_split.c \
 		./ft_strchr.c \
 		./ft_strdup.c \
 		./ft_striteri.c \
@@ -46,8 +47,6 @@ SRCS = 	./ft_atoi.c \
 		./ft_substr.c \
 		./ft_toupper.c \
 		./ft_tolower.c
-
-#	./ft_split.c 
 
 OBJECTS = $(SRCS:.c=.o)
 

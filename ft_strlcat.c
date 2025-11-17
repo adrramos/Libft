@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:29:48 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/13 16:11:52 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/17 18:46:30 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dstlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
 	i = 0;
-	if (size <=  dstlen)
+	if (size <= dstlen)
 		return (srclen + size);
 	while (((dstlen + i) < (size - 1)) && src[i])
 	{

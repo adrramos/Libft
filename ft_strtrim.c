@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:28:23 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/17 13:21:58 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/17 18:46:46 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 
-	if(!s1 || !set)
+	if (!s1 || !set)
 		return (NULL);
 	if (s1[0] == '\0')
 		return (ft_strdup(""));
@@ -60,5 +60,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 /*
 int main (void)
 {
-	
+
 }*/
