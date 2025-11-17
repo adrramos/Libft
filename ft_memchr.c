@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 19:07:56 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/13 19:06:35 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/17 12:28:23 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*str;
 	unsigned char	letter;
 
-	if (!s)
-		return (NULL);
 	letter = (unsigned char)c;
 	count = 0;
 	str = (unsigned char *)s;
-	if (!str)
-		return (NULL);
 	while (count < n)
 	{
 		if (str[count] == letter)

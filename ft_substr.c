@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 16:09:00 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/13 17:21:47 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/17 12:34:11 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,19 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	// confirmar ifs
 	if (!s)
 		return (NULL);
-	if (start > ((unsigned int) ft_strlen(s))|| 
-	((start + len) > ((unsigned int)ft_strlen(s))))
-		return (NULL);
-	strcopy = calloc((len + 1), sizeof(char));
+	if (start >= (size_t)ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	strcopy = ft_calloc((len + 1), sizeof(char));
 	if (!strcopy)
 		return (NULL);
 	i = 0;
-	while ((i < len) && s[i])
+	while ((i < len) && s[start + i])
 	{
 		strcopy[i] = s[start + i];
 		i++;
 	}
-	strcopy[i] = '\0';
 	return (strcopy);
 }
 

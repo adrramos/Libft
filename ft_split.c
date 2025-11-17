@@ -6,14 +6,14 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 16:51:01 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/10 21:20:10 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/17 13:28:51 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*INCOMPLETO*/
-static int	countwords(char const *str, char sep)
+static size_t	countwords(char const *str, char sep)
 {
 	int	i;
 	int	count;
@@ -26,7 +26,7 @@ static int	countwords(char const *str, char sep)
 	is_word = 0;
 	while (str[++i])
 	{
-		while (str[i] == sep)
+		while (str[i] == sep && str[i] != '\0')
 		{
 			i++;
 			is_word = 0;
@@ -42,7 +42,7 @@ static int	countwords(char const *str, char sep)
 	return (count);
 }
 
-static char *countletters(char const *str, char sep)
+static size_t *countletters(char const *str, char sep)
 {
 	int		i;
 	int		countletter;
@@ -52,6 +52,7 @@ static char *countletters(char const *str, char sep)
 	i = 0;
 	while (str[i] == sep)
 		i++;
+	countletter = 0;
 	while (str[i] && str[i] != sep)
 	{
 		countletter++;

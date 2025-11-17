@@ -6,19 +6,19 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 17:57:32 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/14 18:01:15 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/17 12:26:19 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
-# include <stdio.h>
-# include <string.h>
-# include <stdint.h>
-# include <unistd.h>
 # include <limits.h>
+# include <stdint.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+# include <unistd.h>
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
@@ -39,7 +39,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 char	*ft_strchr(const char *s, int c);
-char 	*ft_strdup(const char *s);
+char	*ft_strdup(const char *s);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
@@ -51,8 +51,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-int 	ft_tolower(int c);
-int 	ft_toupper(int c);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
 
-//char	**ft_split(char const *s, char c);
+// char	**ft_split(char const *s, char c);
 #endif
