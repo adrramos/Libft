@@ -6,7 +6,7 @@
 /*   By: adrramos <adrramos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 19:16:21 by adrramos          #+#    #+#             */
-/*   Updated: 2025/11/17 18:43:51 by adrramos         ###   ########.fr       */
+/*   Updated: 2025/11/18 17:08:51 by adrramos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,14 +62,10 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-/*int main (void)
+/*int main(void)
 {
-	int numTest = -5555;
-	char *result = ft_itoa(numTest);
-	int contagem;
-	contagem = countnum(numTest);
-	printf("Teste %s \n", result);
-	printf("Teste funcao auxcontagem %i \n", contagem);
-	free(result);
-	return (0);
+	printf("%s\n", ft_itoa(-1234));
+	printf("%s\n", ft_itoa(1234));
+	printf("%s\n", ft_itoa(0));
+	printf("%s\n", ft_itoa(INT_MIN));
 }*/
